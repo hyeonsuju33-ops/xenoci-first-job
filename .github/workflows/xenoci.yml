@@ -1,0 +1,9 @@
+name: xenoci-first-job
+on:
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: xenoci-2vcpu-ubuntu-2404
+    steps:
+      - uses: actions/checkout@v4
+      - run: uname -a && nproc && free -m && df -h / && echo hello-xenoci
